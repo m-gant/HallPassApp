@@ -14,6 +14,7 @@
 		1907C51B1E4D22FA00BD7623 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1907C5191E4D22FA00BD7623 /* LaunchScreen.storyboard */; };
 		1907C5231E4D240C00BD7623 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1907C5221E4D240C00BD7623 /* Student.swift */; };
 		1907C5251E4D2CB200BD7623 /* StudentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1907C5241E4D2CB200BD7623 /* StudentHandler.swift */; };
+		191D14181E562345009E1C67 /* StudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191D14171E562345009E1C67 /* StudentsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1907C51C1E4D22FA00BD7623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1907C5221E4D240C00BD7623 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		1907C5241E4D2CB200BD7623 /* StudentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentHandler.swift; sourceTree = "<group>"; };
+		191D14171E562345009E1C67 /* StudentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				1907C5101E4D22FA00BD7623 /* AppDelegate.swift */,
 				1907C5121E4D22FA00BD7623 /* ViewController.swift */,
 				1907C5141E4D22FA00BD7623 /* Main.storyboard */,
+				191D14171E562345009E1C67 /* StudentsViewController.swift */,
 				1907C5221E4D240C00BD7623 /* Student.swift */,
 				1907C5241E4D2CB200BD7623 /* StudentHandler.swift */,
 				1907C5171E4D22FA00BD7623 /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 				1907C5251E4D2CB200BD7623 /* StudentHandler.swift in Sources */,
 				1907C5131E4D22FA00BD7623 /* ViewController.swift in Sources */,
 				1907C5231E4D240C00BD7623 /* Student.swift in Sources */,
+				191D14181E562345009E1C67 /* StudentsViewController.swift in Sources */,
 				1907C5111E4D22FA00BD7623 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +311,7 @@
 				1907C5211E4D22FA00BD7623 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
