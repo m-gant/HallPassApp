@@ -9,6 +9,9 @@
 import UIKit
 
 class StudentsViewController: UITableViewController {
+    
+    static var studentList:StudentHandler = StudentHandler(premadeStudentArray: nil)
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

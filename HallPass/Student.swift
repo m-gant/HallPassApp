@@ -32,6 +32,22 @@ class Student {
         attributes = attributeChange
     }
     
+    func getFirstName()->String? {
+        if let nonOptionalFirstName = firstName {
+            return nonOptionalFirstName
+        } else {
+            return "First Name"
+        }
+    }
+    
+    func getLastName()->String? {
+        if let nonOptionalLastName = lastName {
+            return nonOptionalLastName
+        } else {
+            return "Last Name"
+        }
+    }
+    
     
 }
 
