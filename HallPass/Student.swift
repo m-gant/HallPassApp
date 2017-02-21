@@ -10,42 +10,34 @@ import Foundation
 
 class Student {
     //Whenever we get the name we will have to check and unwrap it.
-    var firstName: String?
-    var lastName: String?
+    var firstName: String
+    var lastName: String
     var monthCount: Int = 0
     var weekCount: Int = 0
     var demerits: Int = 0
-    var attributes: [Attributes]
+    var attributes: [Attributes]?
     
-    init (givenFirstName: String, givenLastName: String, givenAttributes: [Attributes]) {
-        firstName = givenFirstName
-        lastName = givenLastName
+    init (givenFirstName: String?, givenLastName: String?, givenAttributes: [Attributes]?) {
+        firstName = givenFirstName ?? "Student"
+        lastName = givenLastName ?? "Name"
         attributes = givenAttributes
     }
     
-    func editName(firstNameChange: String, lastNameChange: String) {
-        firstName = firstNameChange
-        lastName = lastNameChange
+    func editName(firstNameChange: String?, lastNameChange: String?) {
+        firstName = firstNameChange ?? "Student"
+        lastName = lastNameChange ?? "Name"
     }
     
     func editAttributes(attributeChange: [Attributes]) {
         attributes = attributeChange
     }
     
-    func getFirstName()->String? {
-        if let nonOptionalFirstName = firstName {
-            return nonOptionalFirstName
-        } else {
-            return "First Name"
-        }
+    func getFirstName()->String {
+        return firstName
     }
     
-    func getLastName()->String? {
-        if let nonOptionalLastName = lastName {
-            return nonOptionalLastName
-        } else {
-            return "Last Name"
-        }
+    func getLastName()->String {
+        return lastName
     }
     
     

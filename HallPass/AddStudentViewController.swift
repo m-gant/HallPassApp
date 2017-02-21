@@ -130,12 +130,20 @@ class AddStudentViewController: UIViewController, UITextFieldDelegate {
             if attribute3Pressed {
                 inputtedAttributes.append(Attributes.attribute_3)
             }
-            StudentsViewController.studentList.addStudent(student: Student(givenFirstName: FirstNameTextField.text!, givenLastName: LastNameTextField.text!, givenAttributes: inputtedAttributes))
-            print(StudentsViewController.studentList.studentList)
+        StudentsTableViewController.studentsHandler.addStudent(student: Student(givenFirstName: FirstNameTextField.text!, givenLastName: LastNameTextField.text!, givenAttributes: inputtedAttributes))
+            print(StudentsTableViewController.studentsHandler.studentList)
+            print(StudentsTableViewController.studentsHandler.studentList.count)
+            //self.navigationController!.popViewController(animated: true)
+            
+            
+            
             
         }
     }
     
+    @IBAction func CancelButtonPressed(_ sender: Any) {
+        self.navigationController!.popViewController(animated: true)
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)

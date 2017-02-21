@@ -8,9 +8,10 @@
 
 import UIKit
 
-class StudentsViewController: UITableViewController {
+class StudentsTableViewController: UIViewController, UITableViewDataSource {
     
-    static var studentList:StudentHandler = StudentHandler(premadeStudentArray: nil)
+    @IBOutlet weak var tableView:UITableView!
+    static var studentsHandler:StudentHandler = StudentHandler(premadeStudentArray: nil)
     
 
     override func viewDidLoad() {
@@ -28,27 +29,22 @@ class StudentsViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return StudentsTableViewController.studentsHandler.studentList.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "studentCell", for: indexPath) as! StudentCell
+        let student = StudentsTableViewController.studentsHandler.student(atIndex: indexPath.row) ?? Student(givenFirstName: nil, givenLastName: nil, givenAttributes: nil)
+        cell.studentName.text = "\(student.getFirstName()) \(student.getLastName())"
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

@@ -17,13 +17,10 @@ class StudentHandler {
         }
     }
     
-    func addStudent(student:Student?) -> Bool {
+    func addStudent(student:Student?) {
         if let nonOptionalStudent = student {
             studentList.append(nonOptionalStudent)
-            return true
-        } else {
-            return false
-        }
+        } 
     }
     
     func deleteStudent(student: Student) -> Student? {
@@ -37,6 +34,15 @@ class StudentHandler {
     
         }
         return nil
+    }
+    
+    func student(atIndex: Int) -> Student? {
+        if (studentList.count > atIndex) {
+            return studentList[atIndex]
+        } else {
+            return nil
+        }
+        
     }
     
     
