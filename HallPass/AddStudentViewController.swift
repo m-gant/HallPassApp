@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol updateStudentTableView {
+    func updateStudentTableView()
+}
+
 class AddStudentViewController: UIViewController, UITextFieldDelegate {
 
     var femaleAttributePressed:Bool = false
@@ -20,6 +24,7 @@ class AddStudentViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var Attribute1Button: UIButton!
     @IBOutlet weak var Attribute2Button: UIButton!
     @IBOutlet weak var Attribute3Button: UIButton!
+    var delegate: updateStudentTableView? = nil
     
     
     override func viewDidLoad() {
@@ -35,30 +40,32 @@ class AddStudentViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-// Text Field Behaviors
-    @IBAction func clearFirstNameTextField(_ sender: Any) {
-        if (FirstNameTextField.text == "First Name") {
-            FirstNameTextField.text = ""
-        }
-    }
+// Text Field Behaviors (lol)
+//    @IBAction func clearFirstNameTextField(_ sender: Any) {
+//        if (FirstNameTextField.text == "First Name") {
+//            FirstNameTextField.text = ""
+//        }
+//    }
+//    
+//    @IBAction func clearLastNameTextField(_ sender: Any) {
+//        if (LastNameTextField.text == "Last Name") {
+//            LastNameTextField.text = ""
+//        }
+//    }
+//    
+//    @IBAction func replaceFirstName(_ sender: Any) {
+//        if (FirstNameTextField.text == "") {
+//            FirstNameTextField.text = "First Name"
+//        }
+//    }
+//    
+//    @IBAction func replaceLastName(_ sender: Any) {
+//        if (LastNameTextField.text == "") {
+//            LastNameTextField.text = "Last Name"
+//        }
+//    }
+// ABOVE CODE REPLACED WITH PLACEHOLDER 
     
-    @IBAction func clearLastNameTextField(_ sender: Any) {
-        if (LastNameTextField.text == "Last Name") {
-            LastNameTextField.text = ""
-        }
-    }
-    
-    @IBAction func replaceFirstName(_ sender: Any) {
-        if (FirstNameTextField.text == "") {
-            FirstNameTextField.text = "First Name"
-        }
-    }
-    
-    @IBAction func replaceLastName(_ sender: Any) {
-        if (LastNameTextField.text == "") {
-            LastNameTextField.text = "Last Name"
-        }
-    }
 // Later add functionality that displays warning messages if textfields are left nil
     
 //Attribute functionality
@@ -112,30 +119,17 @@ class AddStudentViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func AddStudentPressed(_ sender: Any) {
-        if (FirstNameTextField.text == "First Name") || (LastNameTextField.text == "Last Name") {
+        if (FirstNameTextField.text == nil) || (LastNameTextField.text == nil) {
             let invalidNameAlert = UIAlertController(title: "Invalid Name Entered", message: "Please enter a correct first and last name.", preferredStyle: UIAlertControllerStyle.alert)
             invalidNameAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             self.present(invalidNameAlert, animated: true, completion: nil)
         } else {
-            var inputtedAttributes:[Attributes] = []
-            if femaleAttributePressed {
-                inputtedAttributes.append(Attributes.Female)
-            }
-            if attribute1Pressed {
-                inputtedAttributes.append(Attributes.atrribute_1)
-            }
-            if attribute2Pressed {
-                inputtedAttributes.append(Attributes.attribute_2)
-            }
-            if attribute3Pressed {
-                inputtedAttributes.append(Attributes.attribute_3)
-            }
-        StudentsTableViewController.studentsHandler.addStudent(student: Student(givenFirstName: FirstNameTextField.text!, givenLastName: LastNameTextField.text!, givenAttributes: inputtedAttributes))
-            print(StudentsTableViewController.studentsHandler.studentList)
+            let studentAttributes: [Bool] = [femaleAttributePressed, attribute1Pressed, attribute2Pressed, attribute3Pressed]
+            
+            StudentsTableViewController.studentsHandler.addStudent(firstName: FirstNameTextField.text!, lastName: LastNameTextField.text!, attributes: studentAttributes)
+            delegate?.updateStudentTableView()
             print(StudentsTableViewController.studentsHandler.studentList.count)
-            //self.navigationController!.popViewController(animated: true)
-            
-            
+            self.navigationController!.popViewController(animated: true)
             
             
         }

@@ -8,30 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		1907C5111E4D22FA00BD7623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1907C5101E4D22FA00BD7623 /* AppDelegate.swift */; };
-		1907C5131E4D22FA00BD7623 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1907C5121E4D22FA00BD7623 /* ViewController.swift */; };
-		1907C5161E4D22FA00BD7623 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1907C5141E4D22FA00BD7623 /* Main.storyboard */; };
 		1907C5181E4D22FA00BD7623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1907C5171E4D22FA00BD7623 /* Assets.xcassets */; };
 		1907C51B1E4D22FA00BD7623 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1907C5191E4D22FA00BD7623 /* LaunchScreen.storyboard */; };
-		1907C5231E4D240C00BD7623 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1907C5221E4D240C00BD7623 /* Student.swift */; };
 		1907C5251E4D2CB200BD7623 /* StudentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1907C5241E4D2CB200BD7623 /* StudentHandler.swift */; };
 		191D141A1E56496D009E1C67 /* StudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191D14191E56496D009E1C67 /* StudentCell.swift */; };
 		191D141C1E565264009E1C67 /* AddStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191D141B1E565264009E1C67 /* AddStudentViewController.swift */; };
 		1944F8C91E579879000F5776 /* StudentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944F8C81E579879000F5776 /* StudentsTableViewController.swift */; };
+		1944F9411E6084CB000F5776 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1944F9401E6084CB000F5776 /* CoreData.framework */; };
+		1944F9441E60853D000F5776 /* HallPass.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1944F9421E60853D000F5776 /* HallPass.xcdatamodeld */; };
+		1944F9461E6085D8000F5776 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944F9451E6085D8000F5776 /* DataController.swift */; };
+		1944F9541E60DA64000F5776 /* Student+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944F9501E60DA64000F5776 /* Student+CoreDataClass.swift */; };
+		1944F9551E60DA64000F5776 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944F9511E60DA64000F5776 /* Student+CoreDataProperties.swift */; };
+		1944F9561E60DA64000F5776 /* Attributes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944F9521E60DA64000F5776 /* Attributes+CoreDataClass.swift */; };
+		1944F9571E60DA64000F5776 /* Attributes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944F9531E60DA64000F5776 /* Attributes+CoreDataProperties.swift */; };
+		1944F9591E60E3EE000F5776 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1944F9581E60E3EE000F5776 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1907C50D1E4D22FA00BD7623 /* HallPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HallPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1907C5101E4D22FA00BD7623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1907C5121E4D22FA00BD7623 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1907C5151E4D22FA00BD7623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1907C5171E4D22FA00BD7623 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1907C51A1E4D22FA00BD7623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1907C51C1E4D22FA00BD7623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1907C5221E4D240C00BD7623 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		1907C5241E4D2CB200BD7623 /* StudentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentHandler.swift; sourceTree = "<group>"; };
 		191D14191E56496D009E1C67 /* StudentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentCell.swift; sourceTree = "<group>"; };
-		191D141B1E565264009E1C67 /* AddStudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStudentViewController.swift; sourceTree = "<group>"; };
+		191D141B1E565264009E1C67 /* AddStudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStudentViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1944F8C81E579879000F5776 /* StudentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentsTableViewController.swift; path = ../StudentsTableViewController.swift; sourceTree = "<group>"; };
+		1944F9401E6084CB000F5776 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1944F9431E60853D000F5776 /* HallPass.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HallPass.xcdatamodel; sourceTree = "<group>"; };
+		1944F9451E6085D8000F5776 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		1944F9501E60DA64000F5776 /* Student+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1944F9511E60DA64000F5776 /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1944F9521E60DA64000F5776 /* Attributes+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Attributes+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1944F9531E60DA64000F5776 /* Attributes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Attributes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1944F9581E60E3EE000F5776 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1944F9411E6084CB000F5776 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +61,7 @@
 			children = (
 				1907C50F1E4D22FA00BD7623 /* HallPass */,
 				1907C50E1E4D22FA00BD7623 /* Products */,
+				1944F93F1E6084CB000F5776 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,18 +77,38 @@
 			isa = PBXGroup;
 			children = (
 				1907C5101E4D22FA00BD7623 /* AppDelegate.swift */,
-				1907C5121E4D22FA00BD7623 /* ViewController.swift */,
-				1907C5141E4D22FA00BD7623 /* Main.storyboard */,
 				1944F8C81E579879000F5776 /* StudentsTableViewController.swift */,
 				191D141B1E565264009E1C67 /* AddStudentViewController.swift */,
 				191D14191E56496D009E1C67 /* StudentCell.swift */,
-				1907C5221E4D240C00BD7623 /* Student.swift */,
 				1907C5241E4D2CB200BD7623 /* StudentHandler.swift */,
+				1944F9451E6085D8000F5776 /* DataController.swift */,
+				1944F9581E60E3EE000F5776 /* Main.storyboard */,
+				1944F9421E60853D000F5776 /* HallPass.xcdatamodeld */,
+				1944F94F1E608B6C000F5776 /* Models */,
 				1907C5171E4D22FA00BD7623 /* Assets.xcassets */,
 				1907C5191E4D22FA00BD7623 /* LaunchScreen.storyboard */,
 				1907C51C1E4D22FA00BD7623 /* Info.plist */,
 			);
 			path = HallPass;
+			sourceTree = "<group>";
+		};
+		1944F93F1E6084CB000F5776 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1944F9401E6084CB000F5776 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1944F94F1E608B6C000F5776 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1944F9501E60DA64000F5776 /* Student+CoreDataClass.swift */,
+				1944F9511E60DA64000F5776 /* Student+CoreDataProperties.swift */,
+				1944F9521E60DA64000F5776 /* Attributes+CoreDataClass.swift */,
+				1944F9531E60DA64000F5776 /* Attributes+CoreDataProperties.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +170,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1944F9591E60E3EE000F5776 /* Main.storyboard in Resources */,
 				1907C51B1E4D22FA00BD7623 /* LaunchScreen.storyboard in Resources */,
 				1907C5181E4D22FA00BD7623 /* Assets.xcassets in Resources */,
-				1907C5161E4D22FA00BD7623 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,11 +183,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1944F9561E60DA64000F5776 /* Attributes+CoreDataClass.swift in Sources */,
 				1907C5251E4D2CB200BD7623 /* StudentHandler.swift in Sources */,
+				1944F9541E60DA64000F5776 /* Student+CoreDataClass.swift in Sources */,
 				191D141C1E565264009E1C67 /* AddStudentViewController.swift in Sources */,
-				1907C5131E4D22FA00BD7623 /* ViewController.swift in Sources */,
-				1907C5231E4D240C00BD7623 /* Student.swift in Sources */,
+				1944F9441E60853D000F5776 /* HallPass.xcdatamodeld in Sources */,
 				191D141A1E56496D009E1C67 /* StudentCell.swift in Sources */,
+				1944F9571E60DA64000F5776 /* Attributes+CoreDataProperties.swift in Sources */,
+				1944F9461E6085D8000F5776 /* DataController.swift in Sources */,
+				1944F9551E60DA64000F5776 /* Student+CoreDataProperties.swift in Sources */,
 				1944F8C91E579879000F5776 /* StudentsTableViewController.swift in Sources */,
 				1907C5111E4D22FA00BD7623 /* AppDelegate.swift in Sources */,
 			);
@@ -164,14 +200,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1907C5141E4D22FA00BD7623 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1907C5151E4D22FA00BD7623 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1907C5191E4D22FA00BD7623 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -322,6 +350,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1944F9421E60853D000F5776 /* HallPass.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1944F9431E60853D000F5776 /* HallPass.xcdatamodel */,
+			);
+			currentVersion = 1944F9431E60853D000F5776 /* HallPass.xcdatamodel */;
+			path = HallPass.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1907C5051E4D22FA00BD7623 /* Project object */;
 }

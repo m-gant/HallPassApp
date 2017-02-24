@@ -8,21 +8,31 @@
 
 import UIKit
 
-class StudentsTableViewController: UITableViewController {
+class StudentsTableViewController: UITableViewController, AlertHandlerDelegate, updateStudentTableView {
     
     
-    static var studentsHandler:StudentHandler = StudentHandler(premadeStudentArray: nil)
+    static var studentsHandler:StudentHandler = StudentHandler()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
+        StudentsTableViewController.studentsHandler.delegate = self
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toAddStudent" {
+            let addStudentVC = segue.destination as! AddStudentViewController
+            addStudentVC.delegate = self
+        } else{
+            super.prepare(for: segue, sender: sender)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,12 +48,20 @@ class StudentsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "studentCell", for: indexPath) as! StudentCell
-        let student = StudentsTableViewController.studentsHandler.student(atIndex: indexPath.row) ?? Student(givenFirstName: nil, givenLastName: nil, givenAttributes: nil)
-        cell.studentName.text = "\(student.getFirstName()) \(student.getLastName())"
+        let student = StudentsTableViewController.studentsHandler.student(atIndex: indexPath.row)
+        cell.studentName.text = "\(student.firstName!) \(student.lastName!)"
         
         // Configure the cell...
         
         return cell
+    }
+    
+    func errorDidOccur(_ alert: UIAlertController) {
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func updateStudentTableView() {
+        self.tableView.reloadData()
     }
     
     
