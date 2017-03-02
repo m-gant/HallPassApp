@@ -46,7 +46,7 @@ class StudentsTableViewController: UITableViewController, AlertHandlerDelegate, 
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return StudentsTableViewController.studentsHandler.studentList.count
+        return StudentsTableViewController.studentsHandler.count()
     }
     
     
@@ -60,6 +60,16 @@ class StudentsTableViewController: UITableViewController, AlertHandlerDelegate, 
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
+            StudentsTableViewController.studentsHandler.remove(atIndex: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        delete.backgroundColor = .red
+        return [delete]
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         currentStudentCheckedOut = indexPath.row
     }
@@ -74,7 +84,7 @@ class StudentsTableViewController: UITableViewController, AlertHandlerDelegate, 
     
     
     func passStudentReference() -> Student {
-        return StudentsTableViewController.studentsHandler.studentList[currentStudentCheckedOut]
+        return StudentsTableViewController.studentsHandler.student(atIndex: currentStudentCheckedOut)
     }
     
     

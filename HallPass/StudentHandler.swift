@@ -14,7 +14,7 @@ protocol AlertHandlerDelegate {
 }
 
 class StudentHandler {
-    var studentList:[Student] = []
+    private var studentList:[Student] = []
     var delegate: AlertHandlerDelegate? = nil
     
     init() {
@@ -71,6 +71,16 @@ class StudentHandler {
             return student
         }
         
+    }
+    
+    func count() -> Int {
+        return studentList.count
+    }
+    
+    func remove(atIndex index: Int) {
+        let managedContext = DataController.getContext()
+        managedContext.delete(studentList[index])
+        studentList.remove(at: index)
     }
     
     

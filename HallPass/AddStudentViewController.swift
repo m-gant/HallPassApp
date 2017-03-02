@@ -128,7 +128,7 @@ class AddStudentViewController: UIViewController, UITextFieldDelegate {
             
             StudentsTableViewController.studentsHandler.addStudent(firstName: FirstNameTextField.text!, lastName: LastNameTextField.text!, attributes: studentAttributes)
             delegate?.updateStudentTableView()
-            print(StudentsTableViewController.studentsHandler.studentList.count)
+            print(StudentsTableViewController.studentsHandler.count())
             self.navigationController!.popViewController(animated: true)
             
             

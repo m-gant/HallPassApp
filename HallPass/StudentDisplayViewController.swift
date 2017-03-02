@@ -31,7 +31,7 @@ class StudentDisplayViewController: UIViewController {
         super.viewDidLoad()
         if delegate != nil {
             currentStudent = delegate?.passStudentReference()
-            print("this happened")
+            //print("this happened")
         }
         if let nonOptionalStudent = currentStudent {
             firstNameTextField.text = nonOptionalStudent.firstName!
