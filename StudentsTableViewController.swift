@@ -8,10 +8,11 @@
 
 import UIKit
 
-class StudentsTableViewController: UITableViewController, AlertHandlerDelegate, updateStudentTableView {
+class StudentsTableViewController: UITableViewController, AlertHandlerDelegate, updateStudentTableView, PassStudentReferenceDelegate {
     
     
     static var studentsHandler:StudentHandler = StudentHandler()
+    var currentStudentCheckedOut = 0
     
     
     override func viewDidLoad() {
@@ -30,7 +31,10 @@ class StudentsTableViewController: UITableViewController, AlertHandlerDelegate, 
         if segue.identifier == "toAddStudent" {
             let addStudentVC = segue.destination as! AddStudentViewController
             addStudentVC.delegate = self
-        } else{
+        } else if segue.identifier == "toStudentDisplay" {
+            let studentDisplayVC = segue.destination as! StudentDisplayViewController
+            studentDisplayVC.delegate = self
+        } else {
             super.prepare(for: segue, sender: sender)
         }
     }
@@ -49,11 +53,15 @@ class StudentsTableViewController: UITableViewController, AlertHandlerDelegate, 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "studentCell", for: indexPath) as! StudentCell
         let student = StudentsTableViewController.studentsHandler.student(atIndex: indexPath.row)
+        cell.cellStudent = student
         cell.studentName.text = "\(student.firstName!) \(student.lastName!)"
         
         // Configure the cell...
         
         return cell
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        currentStudentCheckedOut = indexPath.row
     }
     
     func errorDidOccur(_ alert: UIAlertController) {
@@ -62,6 +70,11 @@ class StudentsTableViewController: UITableViewController, AlertHandlerDelegate, 
     
     func updateStudentTableView() {
         self.tableView.reloadData()
+    }
+    
+    
+    func passStudentReference() -> Student {
+        return StudentsTableViewController.studentsHandler.studentList[currentStudentCheckedOut]
     }
     
     

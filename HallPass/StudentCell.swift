@@ -12,6 +12,7 @@ class StudentCell: UITableViewCell {
 
     
     @IBOutlet weak var studentName: UILabel!
+    var cellStudent:Student?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -28,5 +29,6 @@ class StudentCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    
 }

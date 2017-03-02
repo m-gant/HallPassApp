@@ -22,6 +22,7 @@
 		1944F9561E60DA64000F5776 /* Attributes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944F9521E60DA64000F5776 /* Attributes+CoreDataClass.swift */; };
 		1944F9571E60DA64000F5776 /* Attributes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944F9531E60DA64000F5776 /* Attributes+CoreDataProperties.swift */; };
 		1944F9591E60E3EE000F5776 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1944F9581E60E3EE000F5776 /* Main.storyboard */; };
+		1944F95B1E60F13C000F5776 /* StudentDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944F95A1E60F13C000F5776 /* StudentDisplayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		1944F9521E60DA64000F5776 /* Attributes+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Attributes+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1944F9531E60DA64000F5776 /* Attributes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Attributes+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1944F9581E60E3EE000F5776 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
+		1944F95A1E60F13C000F5776 /* StudentDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentDisplayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				1907C5101E4D22FA00BD7623 /* AppDelegate.swift */,
 				1944F8C81E579879000F5776 /* StudentsTableViewController.swift */,
 				191D141B1E565264009E1C67 /* AddStudentViewController.swift */,
+				1944F95A1E60F13C000F5776 /* StudentDisplayViewController.swift */,
 				191D14191E56496D009E1C67 /* StudentCell.swift */,
 				1907C5241E4D2CB200BD7623 /* StudentHandler.swift */,
 				1944F9451E6085D8000F5776 /* DataController.swift */,
@@ -192,6 +195,7 @@
 				1944F9571E60DA64000F5776 /* Attributes+CoreDataProperties.swift in Sources */,
 				1944F9461E6085D8000F5776 /* DataController.swift in Sources */,
 				1944F9551E60DA64000F5776 /* Student+CoreDataProperties.swift in Sources */,
+				1944F95B1E60F13C000F5776 /* StudentDisplayViewController.swift in Sources */,
 				1944F8C91E579879000F5776 /* StudentsTableViewController.swift in Sources */,
 				1907C5111E4D22FA00BD7623 /* AppDelegate.swift in Sources */,
 			);
